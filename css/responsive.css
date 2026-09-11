@@ -1125,6 +1125,51 @@ html[dir="rtl"] .rooms-heading {
         display: none;
     }
 }
+
+@media (max-width: 900px) {
+
+.booking-card {
+    padding: 45px 35px;
+}
+
+.booking-form {
+    grid-template-columns: 1fr 1fr;
+}
+
+.booking-submit {
+    width: 100%;
+}
+
+}
+
+@media (max-width: 600px) {
+
+.booking-section {
+    padding: 65px 0;
+}
+
+.booking-card {
+    padding: 38px 22px;
+}
+
+.booking-intro {
+    margin-bottom: 30px;
+}
+
+.booking-intro h2 {
+    font-size: 1.9rem;
+}
+
+.booking-form {
+    grid-template-columns: 1fr;
+    gap: 18px;
+}
+
+.booking-submit {
+    height: 54px;
+}
+
+}
 /* =========================================================
    ROOMS PAGE — RESPONSIVE
    ========================================================= */
