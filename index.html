@@ -311,7 +311,7 @@
             <article class="room-card">
 
                 <div class="room-image">
-                    <img src="assets/images/single.jpg" 
+                    <img src="assets/images/single.jpg"
                          alt="Single Room"
                          loading="lazy">
                 </div>
@@ -693,6 +693,107 @@
       </a>
 
     </section>
+
+
+    <!-- BOOKING -->
+
+<section class="booking-section" id="booking">
+  <div class="container">
+
+
+<div class="booking-card">
+
+  <div class="booking-intro">
+    <span class="booking-eyebrow" data-lang="booking-label">
+      PLAN YOUR STAY
+    </span>
+
+    <h2 data-lang="booking-title">
+      Check Availability
+    </h2>
+
+    <p data-lang="booking-description">
+      Select your dates and number of guests to check room availability.
+    </p>
+  </div>
+
+  <form class="booking-form">
+
+    <div class="booking-field">
+      <label for="check-in" data-lang="booking-checkin">
+        Check-in
+      </label>
+
+      <div class="booking-input">
+        <span class="booking-icon">→</span>
+        <input
+          type="date"
+          id="check-in"
+          name="check-in"
+          required
+        >
+      </div>
+    </div>
+
+    <div class="booking-field">
+      <label for="check-out" data-lang="booking-checkout">
+        Check-out
+      </label>
+
+      <div class="booking-input">
+        <span class="booking-icon">→</span>
+        <input
+          type="date"
+          id="check-out"
+          name="check-out"
+          required
+        >
+      </div>
+    </div>
+
+    <div class="booking-field">
+      <label for="guests" data-lang="booking-guests">
+        Guests
+      </label>
+
+      <div class="booking-input">
+        <span class="booking-icon">→</span>
+
+        <select id="guests" name="guests" required>
+          <option value="" data-lang="booking-select">
+            Select
+          </option>
+
+          <option value="1">1 Guest</option>
+          <option value="2">2 Guests</option>
+          <option value="3">3 Guests</option>
+          <option value="4">4 Guests</option>
+          <option value="5">5+ Guests</option>
+        </select>
+      </div>
+    </div>
+
+    <button
+      type="submit"
+      class="booking-submit"
+    >
+      <span data-lang="booking-button">
+        Check Availability
+      </span>
+      <span class="booking-arrow">↗</span>
+    </button>
+
+  </form>
+
+</div>
+```
+
+  </div>
+</section>
+<!-- END BOOKING -->
+
+
+    
 
 
     <!-- =========================================
