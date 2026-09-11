@@ -569,8 +569,8 @@ ul {
 }
 
 .hero-content {
-    margin-left: 44px;
     max-width: 650px;
+    margin-left: 220px;
 }
 
 .hero-content h1 {
@@ -770,98 +770,231 @@ ul {
    ========================================================= */
 
 .booking-section {
-    background: var(--cream);
-    padding: 40px 0;
+padding: 90px 0;
+background: var(--cream);
 }
-
 
 .booking-card {
-    padding: 32px 35px;
+position: relative;
 
-    background: var(--white);
+max-width: 1120px;
+margin: 0 auto;
 
-    border-top: 2px solid var(--gold);
+padding: 55px 60px;
 
-    box-shadow: var(--shadow);
-    max-width: 950px;
-    margin: 0 auto;
+background: var(--white);
+
+border: 1px solid var(--border);
+
+box-shadow: 0 18px 45px rgba(20, 25, 30, 0.08);
+
 }
 
-.booking-heading {
-    margin-bottom: 24px;
+/* TOP ACCENT */
+
+.booking-card::before {
+content: "";
+
+position: absolute;
+top: 0;
+left: 0;
+
+width: 100%;
+height: 3px;
+
+background: var(--gold);
+
 }
 
-.booking-heading span {
-    color: var(--gold);
+/* INTRO */
 
-    font-size: 0.68rem;
-    font-weight: 700;
-
-    letter-spacing: 0.18em;
-    text-transform: uppercase;
+.booking-intro {
+max-width: 620px;
+margin-bottom: 38px;
 }
 
-.booking-heading h2 {
-    margin-top: 5px;
+.booking-eyebrow {
+display: block;
 
-    color: var(--text-dark);
+margin-bottom: 10px;
 
-    font-family: var(--font-heading);
-    font-size: 1.8rem;
-    font-weight: 500;
+color: var(--gold);
+
+font-size: 0.68rem;
+font-weight: 700;
+
+letter-spacing: 0.2em;
+text-transform: uppercase;
+
 }
+
+.booking-intro h2 {
+margin: 0 0 12px;
+
+color: var(--text-dark);
+
+font-family: var(--font-heading);
+font-size: 2.25rem;
+font-weight: 500;
+
+}
+
+.booking-intro p {
+margin: 0;
+
+color: var(--text-muted);
+
+font-size: 0.92rem;
+line-height: 1.7;
+
+}
+
+/* FORM */
 
 .booking-form {
-    display: grid;
+display: grid;
 
-    grid-template-columns: 1fr 1fr 1fr auto;
+grid-template-columns: 1fr 1fr 1fr auto;
 
-    gap: 14px;
+gap: 16px;
 
-    align-items: end;
+align-items: end;
+
 }
 
+/* FIELD */
+
 .booking-field {
-    display: flex;
-    flex-direction: column;
-    gap: 6px;
+display: flex;
+flex-direction: column;
+
+gap: 9px;
+
 }
 
 .booking-field label {
-    color: var(--text-dark);
+color: var(--text-dark);
 
-    font-size: 0.67rem;
-    font-weight: 700;
+font-size: 0.67rem;
+font-weight: 700;
 
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
+letter-spacing: 0.1em;
+text-transform: uppercase;
+
 }
 
-.booking-field input,
-.booking-field select {
-    width: 100%;
-    height: 49px;
+/* INPUT */
 
-    padding: 0 14px;
-
-    border: 1px solid var(--border);
-
-    background: var(--cream);
-    color: var(--text-dark);
-
-    outline: none;
-
-    transition: border-color var(--transition);
+.booking-input {
+position: relative;
 }
 
-.booking-field input:focus,
-.booking-field select:focus {
-    border-color: var(--gold);
+.booking-input input,
+.booking-input select {
+width: 100%;
+height: 54px;
+
+padding: 0 16px;
+
+border: 1px solid var(--border);
+
+border-radius: 0;
+
+background: var(--cream);
+color: var(--text-dark);
+
+font-family: inherit;
+font-size: 0.88rem;
+
+outline: none;
+
+transition:
+    border-color var(--transition),
+    background var(--transition);
+
+}
+
+.booking-input input,
+.booking-input select {
+border-color: var(--gold);
+
+background: var(--white);
+
+}
+
+/* REMOVE DEFAULT SELECT LOOK */
+
+.booking-input select {
+cursor: pointer;
+
+appearance: auto;
+
+}
+
+/* BUTTON */
+
+.booking-submit {
+display: flex;
+align-items: center;
+justify-content: center;
+gap: 14px;
+
+height: 54px;
+
+padding: 0 24px;
+
+border: 1px solid var(--gold);
+
+background: var(--gold);
+color: var(--white);
+
+font-family: inherit;
+font-size: 0.72rem;
+font-weight: 700;
+
+letter-spacing: 0.08em;
+text-transform: uppercase;
+
+cursor: pointer;
+
+white-space: nowrap;
+
+transition:
+    background var(--transition),
+    border-color var(--transition),
+    transform var(--transition);
+
 }
 
 .booking-submit {
-    height: 49px;
-    white-space: nowrap;
+background: var(--text-dark);
+border-color: var(--text-dark);
+
+transform: translateY(-2px);
+
+}
+
+.booking-arrow {
+font-size: 1rem;
+
+transition: transform var(--transition);
+
+}
+
+.booking-submit .booking-arrow {
+transform: translate(3px, -3px);
+}
+
+/* =========================
+BOOKING RTL
+========================= */
+
+html[dir="rtl"] .booking-card {
+text-align: right;
+}
+
+html[dir="rtl"] .booking-submit {
+flex-direction: row-reverse;
 }
 
 
