@@ -1,11 +1,4 @@
-/* =========================================================
-   LUNA HOTEL — RESPONSIVE STYLES
-   ========================================================= */
 
-
-/* =========================================================
-   GLOBAL RESPONSIVE SAFETY
-   ========================================================= */
 
 html {
     overflow-x: hidden;
@@ -478,18 +471,7 @@ button {
     }
 
     .hero-content h1 {
-        font-size: 2.65rem;
-    }
-
-    .hero-buttons {
-        flex-direction: column;
-        align-items: stretch;
-        gap: 14px;
-        width: 100%;
-    }
-
-    .hero-buttons .btn {
-        width: 100%;
+        font-size: 0.65rem;
     }
 
     .hero-arrow {
@@ -987,7 +969,14 @@ html[dir="rtl"] .rooms-heading {
     }
 
     .hero-buttons {
+        flex-direction: column;
+        align-items: stretch;
         gap: 10px;
+        width: 100%;
+    }
+
+    .hero-buttons .btn {
+        width: 100%;
     }
 
     .hero-buttons .btn-primary,
@@ -1169,6 +1158,135 @@ html[dir="rtl"] .rooms-heading {
     height: 54px;
 }
 
+}
+
+/* =========================================================
+   MOBILE HERO - CLEAN ARABIC / RTL UI
+   ========================================================= */
+
+@media (max-width: 768px) {
+
+    .hero-content {
+        width: calc(100% - 55px);
+        max-width: 500px;
+        margin-top: 65px;
+    }
+
+    /* Main title */
+    .hero-content h1 {
+        font-size: 2.65rem;
+        line-height: 1.05;
+        margin-bottom: 2px;
+        letter-spacing: 0;
+    }
+
+    /* Accent title */
+    .hero-title-accent {
+        font-size: 2.15rem;
+        line-height: 1.05;
+        margin-bottom: 24px !important;
+    }
+
+    /* Buttons */
+    .hero-buttons {
+        display: flex;
+        flex-direction: row;
+        gap: 9px;
+        width: auto;
+    }
+
+    .hero-buttons .btn,
+    .hero-buttons .btn-primary,
+    .hero-buttons .btn-video {
+        width: auto !important;
+        min-width: 0;
+        min-height: 43px;
+        padding: 0 15px;
+        font-size: 0.68rem;
+        white-space: nowrap;
+        flex: 0 0 auto;
+    }
+
+    .btn-video-icon {
+        width: 25px;
+        height: 25px;
+    }
+
+    /* RTL */
+    html[dir="rtl"] .hero-content {
+        text-align: right;
+        align-items: flex-end;
+    }
+
+    html[dir="rtl"] .hero-content h1,
+    html[dir="rtl"] .hero-title-accent {
+        text-align: right;
+    }
+
+    html[dir="rtl"] .hero-buttons {
+        justify-content: flex-end;
+    }
+}
+
+
+/* Smaller phones */
+@media (max-width: 480px) {
+
+    .hero-content {
+        width: calc(100% - 45px);
+        margin-top: 70px;
+    }
+
+    .hero-content h1 {
+        font-size: 2.35rem;
+        line-height: 1.05;
+    }
+
+    .hero-title-accent {
+        font-size: 1.95rem;
+        margin-bottom: 21px !important;
+    }
+
+    .hero-buttons {
+        gap: 7px;
+    }
+
+    .hero-buttons .btn,
+    .hero-buttons .btn-primary,
+    .hero-buttons .btn-video {
+        min-height: 41px;
+        padding: 0 12px;
+        font-size: 0.62rem;
+    }
+
+    .btn-video-icon {
+        width: 23px;
+        height: 23px;
+    }
+}
+
+
+/* Very small phones */
+@media (max-width: 360px) {
+
+    .hero-content {
+        width: calc(100% - 36px);
+    }
+
+    .hero-content h1 {
+        font-size: 2.1rem;
+    }
+
+    .hero-title-accent {
+        font-size: 1.8rem;
+    }
+
+    .hero-buttons .btn,
+    .hero-buttons .btn-primary,
+    .hero-buttons .btn-video {
+        padding: 0 10px;
+        font-size: 0.58rem;
+    }
 }
 /* =========================================================
    ROOMS PAGE — RESPONSIVE
